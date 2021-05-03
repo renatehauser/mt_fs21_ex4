@@ -8,14 +8,14 @@ shared_models=$base/shared_models
 
 # download preprocessed data
 
-wget https://files.ifi.uzh.ch/cl/archiv/2020/mt21/data.tar.gz -P $base
+wget https://files.ifi.uzh.ch/cl/archiv/2021/mt21/data.tar.gz -P $base
 tar -xzvf $base/data.tar.gz
 
 rm $base/data.tar.gz
 
 # download shared models (which, in this case, is only the vocabulary)
 
-wget https://files.ifi.uzh.ch/cl/archiv/2020/mt21/shared_models.tar.gz -P $base
+wget https://files.ifi.uzh.ch/cl/archiv/2021/mt21/shared_models.tar.gz -P $base
 tar -xzvf $base/shared_models.tar.gz
 
 rm $base/shared_models.tar.gz
