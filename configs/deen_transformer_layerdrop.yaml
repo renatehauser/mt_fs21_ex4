@@ -35,7 +35,7 @@ training:
     validation_freq: 500
     logging_freq: 100
     eval_metric: "bleu"
-    model_dir: "models/deen_transformer_regular"
+    model_dir: "models/deen_transformer_layerdrop"
     overwrite: False
     shuffle: True
     use_cuda: True
