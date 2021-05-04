@@ -37,7 +37,7 @@ training:
     model_dir: "models/deen_transformer_regular"
     overwrite: False
     shuffle: True
-    use_cuda: True
+    use_cuda: False
     max_output_length: 100
     print_valid_sents: [0, 1, 2, 3, 4]
     label_smoothing: 0.3
