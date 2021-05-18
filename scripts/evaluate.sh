@@ -23,7 +23,9 @@ device=0
 
 SECONDS=0
 
-model_name=deen_transformer_layerdrop
+model_name=deen_transformer_layerdrop_12
+# model_name=deen_transformer_layerdrop03
+# model_name=deen_transformer_layerdrop
 
 echo "###############################################################################"
 echo "model_name $model_name"
