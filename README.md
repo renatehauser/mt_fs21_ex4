@@ -15,7 +15,7 @@ data and train & evaluate models.
 
 Clone this repository in the desired place:
 
-    git clone https://github.com/lucasseiler/mt_fs21_ex4
+    git clone https://github.com/renatehauser/mt_fs21_ex4
 
 Create a new virtualenv that uses Python 3. Please make sure to run this command outside of any virtual Python environment:
 
@@ -25,7 +25,15 @@ Create a new virtualenv that uses Python 3. Please make sure to run this command
 
 Download and install required software:
 
-    ./scripts/download_install_packages.sh
+    ./scripts/download_moses.sh
+    
+    git clone https://github.com/renatehauser/joeynmt
+    
+    cd joeynmt
+    
+    git checkout layerdrop
+    
+    pip install -e .
 
 Download data:
 
@@ -60,10 +68,12 @@ to 3.9 BLEU points when only using the first and the last encoder layer. Even mo
 models with active layers 1 and 2. Here the BLEU score for the regular model is only slighly higher than 0, while in the
 layerdrop model the BLEU score only decreased by 0.6 points.
 This shows very nicely, that the layerdrop had the intended generalizing effect, so that the model with only parts of the 
-encoder layers being active are able to produce almost equally good translations. However, the BLEU score when using all encoder layers
-is also lower in the layerdrop model than in the model without layerdrop. The high layerdrop probability prevents the model
+encoder layers being active are able to produce almost equally good translations. However, when using all encoder layers, the BLEU score 
+is also lower in the layerdrop model than in the regular model. The high layerdrop probability prevents the model
 from adapting equally well to the data as the regular model, so this result is not surprising.
 
-Adding a dropout probability to the model would further improve the generalization of the layers.
-
+Adding a dropout probability to the model would further improve the generalization of the layers. I am, however, unsure if
+this would lead to an improvement of the model or if it generalizes too much then, not being able to adapt well to the training
+data anymore.
+(I would appreciate it a lot if we could address this question again in a tutorial session)
 
